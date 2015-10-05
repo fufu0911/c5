@@ -1,0 +1,29 @@
+int x = 100;
+int y = 100;
+float endW;
+int r=255;
+int b=86;
+int g=2;
+
+void setup() {
+  size(200, 200);
+  frameRate(5);
+  endW = 0;
+}
+
+void draw() {
+  background(255);
+  stroke(r,g,b);
+  noFill();
+  g += 5;
+  b += 3;
+
+  for (float w = 0.0; w<=endW; w+=3.0) {
+    ellipse(x, y, w, w);
+
+  }
+
+  if (endW<=200) {
+    endW=endW+3.0;
+  }
+}
